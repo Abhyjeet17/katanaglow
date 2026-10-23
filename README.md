@@ -111,6 +111,9 @@ katanaglow-ctl profile save "Night" ; katanaglow-ctl profile load "Night" ; kata
 
 Colours are six hex digits (`RRGGBB`). The full guide is [docs/USER_GUIDE.md](docs/USER_GUIDE.md).
 
+### Images
+![KatanaGlow settings window](docs/images/window.png)
+
 ## Security and privacy
 
 - The service account has no network access, no home-folder access, no capabilities and a read-only view of

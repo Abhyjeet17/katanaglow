@@ -1,0 +1,52 @@
+[Unit]
+Description=KatanaGlow keyboard lighting daemon
+Documentation=file:///usr/share/doc/katanaglow/USER_GUIDE.md
+
+[Service]
+Type=simple
+User=katanaglow
+Group=katanaglow
+# Needed only to read the laptop keyboard (ripple mode). DeviceAllow below limits what it can open.
+SupplementaryGroups=input
+WorkingDirectory=/opt/katanaglow
+Environment=PYTHONPATH=/opt/katanaglow PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -m katanaglow.daemon
+Restart=on-failure
+RestartSec=3
+
+# Private settings folder (/var/lib/katanaglow) and control socket folder (/run/katanaglow)
+StateDirectory=katanaglow
+StateDirectoryMode=0750
+RuntimeDirectory=katanaglow
+RuntimeDirectoryMode=0750
+UMask=0007
+
+# Sandbox: no network, no new privileges, no capabilities, read-only system, no home folders
+NoNewPrivileges=yes
+CapabilityBoundingSet=
+AmbientCapabilities=
+PrivateTmp=yes
+PrivateNetwork=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectProc=invisible
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+RestrictAddressFamilies=AF_UNIX
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+SystemCallArchitectures=native
+SystemCallFilter=~@mount @reboot @swap @module @raw-io @obsolete @cpu-emulation @debug @clock @privileged
+# Only raw HID devices (the RGB controller) and input devices (keyboard, read-only)
+DevicePolicy=closed
+DeviceAllow=char-hidraw rw
+DeviceAllow=char-input r
+
+[Install]
+WantedBy=multi-user.target

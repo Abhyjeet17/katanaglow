@@ -1,0 +1,16 @@
+{
+  "layout": "MSI Katana 15 B13VFK, ANSI, approximate boundaries read from a photo",
+  "zone_order": "left block, centre, right block, numpad (masks 1, 2, 4, 8)",
+  "zones": [
+    ["ESC", "F1", "F2", "GRAVE", "1", "2", "TAB", "Q", "W", "CAPSLOCK", "A", "S", "D",
+     "LEFTSHIFT", "Z", "X", "LEFTCTRL", "LEFTMETA", "LEFTALT"],
+    ["F3", "F4", "F5", "F6", "F7", "F8", "F9", "3", "4", "5", "6", "7", "8",
+     "E", "R", "T", "Y", "U", "I", "F", "G", "H", "J", "K", "C", "V", "B", "N", "M", "SPACE"],
+    ["F10", "F11", "F12", "SYSRQ", "INSERT", "DELETE", "9", "0", "MINUS", "EQUAL", "BACKSPACE",
+     "O", "P", "LEFTBRACE", "RIGHTBRACE", "BACKSLASH", "L", "SEMICOLON", "APOSTROPHE", "ENTER",
+     "COMMA", "DOT", "SLASH", "RIGHTSHIFT", "RIGHTALT", "102ND", "F23", "RIGHTCTRL"],
+    ["NUMLOCK", "KPSLASH", "KPASTERISK", "KPMINUS", "KPPLUS", "KPENTER", "KPDOT",
+     "KP0", "KP1", "KP2", "KP3", "KP4", "KP5", "KP6", "KP7", "KP8", "KP9",
+     "HOME", "END", "PAGEUP", "PAGEDOWN", "UP", "DOWN", "LEFT", "RIGHT"]
+  ]
+}

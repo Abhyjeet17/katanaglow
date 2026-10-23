@@ -1,0 +1,2 @@
+# MSI MysticLight MS-1565 keyboard controller: only the katanaglow service user may open it
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1462", ATTRS{idProduct}=="1601", GROUP="katanaglow", MODE="0660"

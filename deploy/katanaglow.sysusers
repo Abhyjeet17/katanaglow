@@ -1,0 +1,2 @@
+# Unprivileged account (and matching group) that runs the daemon; no login shell
+u katanaglow - "KatanaGlow lighting daemon" /var/lib/katanaglow /usr/sbin/nologin

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Build and download leftovers
+*.tar.gz
+*.zip
+
+# Anything that could carry personal data
+config.json
+profiles.json
+hardware-report*.txt
+*.log
+screenshots-raw/
